@@ -1,0 +1,234 @@
+/* ---- Packages ---- */
+.packages {
+    background: var(--off);
+    color: var(--black);
+    padding: 140px 36px;
+    overflow: hidden;
+    position: relative
+}
+
+.packages::before {
+    content: 'PRICING';
+    position: absolute;
+    top: 50px;
+    right: -40px;
+    font-family: var(--f-display);
+    font-size: clamp(80px, 18vw, 200px);
+    color: rgba(0, 0, 0, .04);
+    letter-spacing: -.05em;
+    pointer-events: none
+}
+
+.pkg-grid {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    align-items: stretch;
+    position: relative;
+    z-index: 1
+}
+
+.pkg {
+    background: var(--white);
+    border: 1.5px solid var(--black);
+    padding: 40px 34px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: transform .4s cubic-bezier(.2, .8, .2, 1), box-shadow .4s
+}
+
+.pkg:hover {
+    transform: translate(-6px, -6px);
+    box-shadow: 12px 12px 0 var(--black)
+}
+
+.pkg--hero {
+    background: var(--black);
+    color: var(--white);
+    border-color: var(--black);
+    transform: translateY(-20px)
+}
+
+.pkg--hero:hover {
+    transform: translate(-6px, -26px);
+    box-shadow: 12px 12px 0 var(--red)
+}
+
+.pkg__ribbon {
+    position: absolute;
+    top: -14px;
+    right: 24px;
+    background: var(--red);
+    color: var(--white);
+    padding: 6px 14px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px
+}
+
+.pkg__tag {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--red);
+    display: block;
+    margin-bottom: 14px
+}
+
+.pkg__name {
+    font-family: var(--f-display);
+    font-size: 40px;
+    letter-spacing: -.03em;
+    line-height: 1;
+    margin-bottom: 22px
+}
+
+.pkg__price {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    margin-bottom: 4px
+}
+
+.price-main {
+    font-family: var(--f-display);
+    font-size: 34px;
+    letter-spacing: -.03em
+}
+
+.price-sub {
+    font-size: 13px;
+    color: var(--muted-dark)
+}
+
+.pkg--hero .price-sub {
+    color: rgba(255, 255, 255, .6)
+}
+
+.price-sub i {
+    font-style: normal;
+    font-size: 10px;
+    margin-left: 4px;
+    padding: 2px 6px;
+    border: 1px solid currentColor;
+    border-radius: 3px;
+    opacity: .7
+}
+
+.pkg__quarter {
+    font-size: 12px;
+    color: var(--muted-dark);
+    margin-bottom: 28px;
+    padding-bottom: 22px;
+    border-bottom: 1px dashed currentColor;
+    opacity: .8
+}
+
+.pkg--hero .pkg__quarter {
+    color: rgba(255, 255, 255, .7)
+}
+
+.pkg__list {
+    list-style: none;
+    flex: 1;
+    margin-bottom: 30px
+}
+
+.pkg__list li {
+    padding: 11px 0 11px 24px;
+    font-size: 13.5px;
+    line-height: 1.5;
+    position: relative;
+    border-bottom: 1px solid rgba(0, 0, 0, .08)
+}
+
+.pkg--hero .pkg__list li {
+    border-bottom-color: rgba(255, 255, 255, .1)
+}
+
+.pkg__list li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--red);
+    font-weight: 700
+}
+
+.pkg__list li:last-child {
+    border-bottom: none
+}
+
+.pkg__list li em {
+    font-family: var(--f-serif);
+    font-style: italic;
+    color: var(--red);
+    font-weight: 500
+}
+
+.pkg__list li b {
+    font-weight: 600
+}
+
+.pkg__cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    border: 1.5px solid currentColor;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    transition: all .25s
+}
+
+.pkg__cta:hover {
+    background: var(--red);
+    border-color: var(--red);
+    color: var(--white)
+}
+
+.pkg__cta--solid {
+    background: var(--red);
+    border-color: var(--red);
+    color: var(--white)
+}
+
+.pkg__cta--solid:hover {
+    background: var(--white);
+    color: var(--black);
+    border-color: var(--white)
+}
+
+@media(max-width:1000px) {
+    .pkg-grid {
+        grid-template-columns: 1fr
+    }
+
+    .pkg--hero {
+        transform: none
+    }
+
+    .pkg--hero:hover {
+        transform: translate(-6px, -6px)
+    }
+}
+
+@media(max-width:720px) {
+    .packages {
+        padding: 70px 20px
+    }
+}
+
+@media(max-width:400px) {
+    .pkg {
+        padding: 30px 22px
+    }
+
+    .pkg__name {
+        font-size: 34px
+    }
+}

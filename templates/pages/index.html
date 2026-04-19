@@ -1,0 +1,606 @@
+{% extends 'base.html' %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/sections/nav.css', v='1.1') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/sections/hero.css', v='1.1') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/sections/marquee.css', v='1.1') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/sections/stats.css', v='1.1') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/sections/about.css', v='1.1') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/sections/services.css', v='1.1') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/sections/process.css', v='1.1') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/sections/packages.css', v='1.1') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/sections/work.css', v='1.1') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/sections/team.css', v='1.1') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/sections/content.css', v='1.1') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/sections/contact.css', v='1.1') }}">
+{% endblock %}
+
+{% block content %}
+<!-- ─── HERO ─── -->
+<section class="hero">
+    <div class="hero__bg" aria-hidden="true"></div>
+    <div class="hero__meta">
+        <span class="hero__meta-id">[ A-001 / 2026 ]</span>
+        <span class="hero__meta-loc">BAREILLY · DELHI · GLOBAL</span>
+    </div>
+    <h1 class="hero__title">
+        <span class="line line--1">Turning</span>
+        <span class="line line--2">businesses</span>
+        <span class="line line--3">into <em>leads</em> &amp;</span>
+        <span class="line line--4">
+            <span class="slash">SALES</span>
+            <svg class="arrow" viewBox="0 0 120 60" aria-hidden="true">
+                <path d="M5 30 L110 30 M85 8 L110 30 L85 52" stroke="currentColor" stroke-width="6" fill="none" stroke-linecap="square" />
+            </svg>
+            <span class="machines">machines.</span>
+        </span>
+    </h1>
+    <div class="hero__foot">
+        <div class="hero__blurb">
+            <span class="dot"></span>
+            <p>A performance marketing studio engineered for growth-hungry brands. We don't just post — we <em>print pipeline</em>.</p>
+        </div>
+        <div class="hero__cta-row">
+            <a href="#contact" class="btn btn--primary">Book Free Audit</a>
+            <a href="#packages" class="btn btn--ghost">See Packages</a>
+        </div>
+    </div>
+    <aside class="hero__side">
+        <div class="stamp">
+            <svg viewBox="0 0 160 160" width="130" height="130">
+                <defs>
+                    <path id="circ" d="M 80,80 m -60,0 a 60,60 0 1,1 120,0 a 60,60 0 1,1 -120,0" />
+                </defs>
+                <text font-family="Space Grotesk" font-size="11" font-weight="600" letter-spacing="2" fill="currentColor">
+                    <textPath href="#circ">TRUSTED BY GROWING BRANDS · EST. 2022 · ROI OBSESSED · </textPath>
+                </text>
+                <polygon points="80,55 95,105 55,75 105,75 65,105" fill="var(--red)" />
+            </svg>
+        </div>
+    </aside>
+</section>
+
+<!-- ─── MARQUEE ─── -->
+<div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+        <span>META ADS</span><span class="bullet">●</span>
+        <span>SEO</span><span class="bullet">●</span>
+        <span>YOUTUBE</span><span class="bullet">●</span>
+        <span>WHATSAPP CRM</span><span class="bullet">●</span>
+        <span>LEAD ENGINE</span><span class="bullet">●</span>
+        <span>CREATIVE STUDIO</span><span class="bullet">●</span>
+        <span>FUNNELS</span><span class="bullet">●</span>
+        <span>LINKEDIN</span><span class="bullet">●</span>
+        <span>INFLUENCER</span><span class="bullet">●</span>
+        <span>PR HUB</span><span class="bullet">●</span>
+        <!-- Duplicate for loop -->
+        <span>META ADS</span><span class="bullet">●</span>
+        <span>SEO</span><span class="bullet">●</span>
+        <span>YOUTUBE</span><span class="bullet">●</span>
+        <span>WHATSAPP CRM</span><span class="bullet">●</span>
+        <span>LEAD ENGINE</span><span class="bullet">●</span>
+        <span>CREATIVE STUDIO</span><span class="bullet">●</span>
+        <span>FUNNELS</span><span class="bullet">●</span>
+        <span>LINKEDIN</span><span class="bullet">●</span>
+        <span>INFLUENCER</span><span class="bullet">●</span>
+        <span>PR HUB</span><span class="bullet">●</span>
+    </div>
+</div>
+
+<!-- ─── STATS ─── -->
+<section class="stats">
+    <div class="section-head">
+        <span class="eyebrow">Receipts, not promises</span>
+        <h2 class="section-title">The scoreboard <em>speaks</em> louder than the pitch.</h2>
+    </div>
+    <div class="stats__grid">
+        <article class="stat">
+            <div class="stat__num" data-target="400" data-suffix="+">0</div>
+            <div class="stat__label">Ads Delivered</div>
+            <div class="stat__bar"><i data-width="82%"></i></div>
+        </article>
+        <article class="stat">
+            <div class="stat__num"><span class="prefix">₹</span><span data-target="12" data-suffix="L+">0</span></div>
+            <div class="stat__label">Spent on Campaigns</div>
+            <div class="stat__bar"><i data-width="68%"></i></div>
+        </article>
+        <article class="stat">
+            <div class="stat__num"><span class="prefix">₹</span><span data-target="3" data-suffix="Cr+">0</span></div>
+            <div class="stat__label">Sales Generated</div>
+            <div class="stat__bar"><i data-width="94%"></i></div>
+        </article>
+        <article class="stat">
+            <div class="stat__num" data-target="38" data-suffix="+">0</div>
+            <div class="stat__label">Brands Scaled</div>
+            <div class="stat__bar"><i data-width="76%"></i></div>
+        </article>
+    </div>
+</section>
+
+<!-- ─── ABOUT ─── -->
+<section class="about" id="about">
+    <div class="about__inner">
+        <div class="about__media">
+            <img class="about__media-main" src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=900&q=80" alt="Adybros team at work" loading="lazy">
+            <span class="about__tag">// THE STUDIO</span>
+            <div class="about__media-stamp" aria-hidden="true"></div>
+        </div>
+        <div class="about__body">
+            <span class="chapter">CH. 01 — WHO WE ARE</span>
+            <h2 style="margin-top:24px">We're the growth partner your <em>competitors</em> wish they had.</h2>
+            <p>Adybros Marketing was built on a simple obsession — <em>pipeline over posts.</em> We stopped caring about vanity metrics years ago. Instead, we wake up asking one question: how much revenue did we move this week?</p>
+            <p>Founded by <strong>Aakarshit Pathak</strong> and <strong>Lakshya Bhatnagar</strong>, we've grown into a tight team of strategists, media buyers, creatives, and CRM engineers who treat your ad spend like it's our own money.</p>
+            <a href="#contact" class="btn btn--primary">Let's Talk Growth</a>
+        </div>
+    </div>
+</section>
+
+<!-- ─── CTA BANNER 1 ─── -->
+<section class="cta-banner">
+    <div class="cta-banner__strip" aria-hidden="true">
+        <span>YOUR AD SPEND.</span><span>our obsession.</span>
+        <span>YOUR GROWTH.</span><span>our scoreboard.</span>
+        <span>YOUR BRAND.</span><span>our battleground.</span>
+        <span>YOUR AD SPEND.</span><span>our obsession.</span>
+    </div>
+    <div class="cta-banner__row">
+        <p>Talking is free. So is the first audit.</p>
+        <a href="#contact" class="btn btn--dark">Book Audit</a>
+    </div>
+</section>
+
+<!-- ─── SERVICES ─── -->
+<section class="services" id="services">
+    <div class="section-head center">
+        <span class="chapter">CH. 02 — WHAT WE DO</span>
+        <h2 class="section-title" style="margin-top:24px">Full-stack <em>digital marketing</em>.<br>Under one roof.</h2>
+        <p class="section-lead" style="margin-left:auto;margin-right:auto">Nine disciplines. One integrated growth engine. Every service is optional — but none of them feel optional once you see the numbers.</p>
+    </div>
+    <div class="services__grid">
+        <article class="service-card">
+            <img class="service-card__img" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=700&q=80" alt="Performance advertising" loading="lazy">
+            <span class="service-card__no">01 / PAID MEDIA</span>
+            <h3>Performance Advertising</h3>
+            <p>Meta, Google, YouTube &amp; LinkedIn campaigns engineered for ROAS. Lead gen, awareness, retargeting — we run it all.</p>
+            <a href="#contact" class="btn btn--primary" style="margin-top:20px; font-size:11px; padding:12px 20px">Contact Now</a>
+        </article>
+        <!-- Card 02 -->
+        <article class="service-card">
+            <img class="service-card__img" src="https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=700&q=80" alt="SEO" loading="lazy">
+            <span class="service-card__no">02 / ORGANIC</span>
+            <h3>SEO &amp; Content</h3>
+            <p>Rank for the searches your buyers actually make. On-page audits, link building, and content that earns clicks.</p>
+            <a href="#contact" class="btn btn--primary" style="margin-top:20px; font-size:11px; padding:12px 20px">Contact Now</a>
+        </article>
+        <!-- Card 03 -->
+        <article class="service-card">
+            <img class="service-card__img" src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=700&q=80" alt="Social Media" loading="lazy">
+            <span class="service-card__no">03 / SOCIAL</span>
+            <h3>Social Media Management</h3>
+            <p>Instagram, Facebook, LinkedIn, YouTube. Dedicated managers, content calendars, and engagement that compounds.</p>
+            <a href="#contact" class="btn btn--primary" style="margin-top:20px; font-size:11px; padding:12px 20px">Contact Now</a>
+        </article>
+        <!-- Card 04 -->
+        <article class="service-card">
+            <img class="service-card__img" src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=700&q=80" alt="Video production" loading="lazy">
+            <span class="service-card__no">04 / MEDIA LAB</span>
+            <h3>Video &amp; Content Production</h3>
+            <p>On-site shoots, studio setups, drone cinematics. 45–90s reels, product videos, and scroll-stopping creatives.</p>
+            <a href="#contact" class="btn btn--primary" style="margin-top:20px; font-size:11px; padding:12px 20px">Contact Now</a>
+        </article>
+        <!-- Card 05 -->
+        <article class="service-card">
+            <img class="service-card__img" src="https://images.unsplash.com/photo-1559028012-481c04fa702d?w=700&q=80" alt="Branding design" loading="lazy">
+            <span class="service-card__no">05 / DESIGN</span>
+            <h3>Branding &amp; Creative Design</h3>
+            <p>Logos, brand systems, carousels, static ads, landing pages. Visual identity that stops the scroll and earns trust.</p>
+            <a href="#contact" class="btn btn--primary" style="margin-top:20px; font-size:11px; padding:12px 20px">Contact Now</a>
+        </article>
+        <!-- Card 06 -->
+        <article class="service-card">
+            <img class="service-card__img" src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=700&q=80" alt="Lead generation" loading="lazy">
+            <span class="service-card__no">06 / LEAD ENGINE</span>
+            <h3>Lead Generation &amp; Funnels</h3>
+            <p>Landing pages, lead magnets, CRM integration. We build the full funnel: Ad → Page → CRM → Follow-up.</p>
+            <a href="#contact" class="btn btn--primary" style="margin-top:20px; font-size:11px; padding:12px 20px">Contact Now</a>
+        </article>
+        <!-- Card 07 -->
+        <article class="service-card">
+            <img class="service-card__img" src="https://images.unsplash.com/photo-1556157382-97eda2d62296?w=700&q=80" alt="WhatsApp marketing" loading="lazy">
+            <span class="service-card__no">07 / CRM</span>
+            <h3>WhatsApp &amp; CRM Automation</h3>
+            <p>Auto-replies, drip campaigns, AI chatbots, broadcasts. Turn cold leads into paying customers on autopilot.</p>
+            <a href="#contact" class="btn btn--primary" style="margin-top:20px; font-size:11px; padding:12px 20px">Contact Now</a>
+        </article>
+        <!-- Card 08 -->
+        <article class="service-card">
+            <img class="service-card__img" src="https://images.unsplash.com/photo-1493612276216-ee3925520721?w=700&q=80" alt="Influencer marketing" loading="lazy">
+            <span class="service-card__no">08 / INFLUENCE</span>
+            <h3>Influencer &amp; PR</h3>
+            <p>Podcast placements, creator collabs, magazine features, and articles on top platforms. We build the authority layer.</p>
+            <a href="#contact" class="btn btn--primary" style="margin-top:20px; font-size:11px; padding:12px 20px">Contact Now</a>
+        </article>
+        <!-- Card 09 -->
+        <article class="service-card">
+            <img class="service-card__img" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=700&q=80" alt="Analytics" loading="lazy">
+            <span class="service-card__no">09 / ANALYTICS</span>
+            <h3>Analytics &amp; Growth Tracking</h3>
+            <p>Ad-spend tracking, CPL insights, campaign-wise reports. Dashboards your founder can actually read.</p>
+            <a href="#contact" class="btn btn--primary" style="margin-top:20px; font-size:11px; padding:12px 20px">Contact Now</a>
+        </article>
+    </div>
+</section>
+
+<!-- ─── CTA BLOCK A ─── -->
+<section class="cta-block">
+    <h2>Not sure where to <em>start</em>?</h2>
+    <p>Jump on a 30-minute call with our growth team. We'll tear your funnel apart and hand you a plan — free.</p>
+    <div class="cta-block__row">
+        <a href="https://wa.me/916396831489" class="btn btn--primary">WhatsApp Us Now</a>
+        <a href="#contact" class="btn btn--ghost">Or Send a Brief</a>
+    </div>
+</section>
+
+<!-- ─── PROCESS ─── -->
+<section class="process" id="process">
+    <div class="section-head center">
+        <span class="chapter">CH. 03 — THE SYSTEM</span>
+        <h2 class="section-title" style="margin-top:24px">The <em>Seven Stations</em> of Adybros.</h2>
+        <p class="section-lead" style="margin-left:auto;margin-right:auto;color:var(--muted-dark)">A repeatable, seven-stage machine. Plug in your brand — get out leads, sales, and compounding authority.</p>
+    </div>
+    <ol class="stations">
+        <li class="station">
+            <div class="station__no">01</div>
+            <div class="station__body">
+                <h3>Customer DNA</h3>
+                <p>Buyer segmentation by budget, location &amp; preference. Audience profiling and razor-sharp buyer insights.</p>
+            </div>
+            <img class="station__img" src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=500&q=80" alt="" loading="lazy">
+        </li>
+        <li class="station">
+            <div class="station__no">02</div>
+            <div class="station__body">
+                <h3>Marketing Funnel</h3>
+                <p>ROI-based ad budget planning. CPL &amp; sales forecasts the founder can actually defend in a board meeting.</p>
+            </div>
+            <img class="station__img" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&q=80" alt="" loading="lazy">
+        </li>
+        <li class="station">
+            <div class="station__no">03</div>
+            <div class="station__body">
+                <h3>Media Lab</h3>
+                <p>On-site, studio, drone &amp; gimbal. Professionally shot videos, static creatives, carousels — content built to convert.</p>
+            </div>
+            <img class="station__img" src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=500&q=80" alt="" loading="lazy">
+        </li>
+        <li class="station">
+            <div class="station__no">04</div>
+            <div class="station__body">
+                <h3>Brand PR Hub</h3>
+                <p>Instagram, Facebook, YouTube &amp; LinkedIn — managed end-to-end. Podcasts, features, magazine placements.</p>
+            </div>
+            <img class="station__img" src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=500&q=80" alt="" loading="lazy">
+        </li>
+        <li class="station">
+            <div class="station__no">05</div>
+            <div class="station__body">
+                <h3>Lead Engine</h3>
+                <p>Meta, YouTube &amp; LinkedIn ad campaigns. Landing pages, retargeting and airtight funnels wired into your CRM.</p>
+            </div>
+            <img class="station__img" src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=500&q=80" alt="" loading="lazy">
+        </li>
+        <li class="station">
+            <div class="station__no">06</div>
+            <div class="station__body">
+                <h3>Conversation Framework</h3>
+                <p>WhatsApp automation, drip campaigns &amp; AI chatbots. Lead tracking, sales pipeline, reminders &amp; follow-ups.</p>
+            </div>
+            <img class="station__img" src="https://images.unsplash.com/photo-1556157382-97eda2d62296?w=500&q=80" alt="" loading="lazy">
+        </li>
+        <li class="station">
+            <div class="station__no">07</div>
+            <div class="station__body">
+                <h3>Growth Tracker</h3>
+                <p>Ad-spend tracking, campaign-wise performance reports, leads generated &amp; CPL insights. No dashboards to decode.</p>
+            </div>
+            <img class="station__img" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&q=80" alt="" loading="lazy">
+        </li>
+    </ol>
+</section>
+
+<!-- ─── CTA BANNER 2 ─── -->
+<section class="cta-banner">
+    <div class="cta-banner__strip" aria-hidden="true">
+        <span>READY TO SCALE?</span><span>let's build.</span>
+        <span>READY TO SCALE?</span><span>let's build.</span>
+        <span>READY TO SCALE?</span><span>let's build.</span>
+        <span>READY TO SCALE?</span><span>let's build.</span>
+    </div>
+    <div class="cta-banner__row">
+        <p>400+ ads delivered. Add yours to the list.</p>
+        <a href="#packages" class="btn btn--dark">See Packages</a>
+    </div>
+</section>
+
+<!-- ─── WORK ─── -->
+<section class="work" id="work">
+    <div class="section-head">
+        <span class="eyebrow">Selected work</span>
+        <h2 class="section-title">Case studies, not <em>case files</em>.</h2>
+        <p class="section-lead">Every brand below was measurable before we started. We made the numbers move — fast.</p>
+    </div>
+    <div class="work__grid">
+        <a href="#contact" class="case">
+            <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1200&q=80" alt="Real estate case" loading="lazy">
+            <div class="case__overlay">
+                <span class="case__tag">REAL ESTATE · META ADS</span>
+                <h3 class="case__title">Mahadev Infra — 3.2× ROAS in 90 days</h3>
+                <span class="case__kpi">CPL ↓ 58%</span>
+            </div>
+        </a>
+        <a href="#contact" class="case">
+            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=700&q=80" alt="" loading="lazy">
+            <div class="case__overlay">
+                <span class="case__tag">HOSPITALITY</span>
+                <h3 class="case__title">Corbett City — 412 leads / mo</h3>
+            </div>
+        </a>
+        <a href="#contact" class="case">
+            <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=700&q=80" alt="" loading="lazy">
+            <div class="case__overlay">
+                <span class="case__tag">D2C</span>
+                <h3 class="case__title">Dev Green — ₹1.2Cr in Q3</h3>
+            </div>
+        </a>
+        <a href="#contact" class="case">
+            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=700&q=80" alt="" loading="lazy">
+            <div class="case__overlay">
+                <span class="case__tag">B2B</span>
+                <h3 class="case__title">KS Ventures — 6× pipeline</h3>
+            </div>
+        </a>
+        <a href="#contact" class="case">
+            <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=700&q=80" alt="" loading="lazy">
+            <div class="case__overlay">
+                <span class="case__tag">LIFESTYLE</span>
+                <h3 class="case__title">Jeevanpreet — 2.1M reach</h3>
+            </div>
+        </a>
+        <a href="#contact" class="case">
+            <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1000&q=80" alt="" loading="lazy">
+            <div class="case__overlay">
+                <span class="case__tag">LUXURY REAL ESTATE</span>
+                <h3 class="case__title">Signature Residency — 87 hot leads / week</h3>
+                <span class="case__kpi">CPL ↓ 43%</span>
+            </div>
+        </a>
+        <a href="#contact" class="case">
+            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1000&q=80" alt="" loading="lazy">
+            <div class="case__overlay">
+                <span class="case__tag">AUTOMOTIVE</span>
+                <h3 class="case__title">Ashok Leyland Partner — ₹48L saved on media</h3>
+                <span class="case__kpi">CTR ↑ 2.4×</span>
+            </div>
+        </a>
+    </div>
+    <div style="text-align:center;margin-top:60px">
+        <a href="#contact" class="btn btn--ghost">Want results like these?</a>
+    </div>
+</section>
+
+<!-- ─── PACKAGES ─── -->
+<section class="packages" id="packages">
+    <div class="section-head">
+        <span class="chapter">CH. 04 — INVEST</span>
+        <h2 class="section-title" style="margin-top:24px">Three packages. <em>Zero</em> guesswork.</h2>
+        <p class="section-lead">Pick the engine that matches your ambition. All prices exclusive of GST. Quarterly plans unlock deeper value.</p>
+    </div>
+    <div class="pkg-grid">
+        <article class="pkg">
+            <header>
+                <span class="pkg__tag">01 / ENTRY</span>
+                <h3 class="pkg__name">Impact</h3>
+                <div class="pkg__price"><span class="price-main">₹35,000</span><span class="price-sub">/ month <i>+GST</i></span></div>
+                <div class="pkg__quarter">or ₹95,000 / 3 months</div>
+            </header>
+            <ul class="pkg__list">
+                <li><b>Customer DNA</b> — segmentation &amp; profiling</li>
+                <li><b>Marketing Funnel</b> — ROI planning, CPL forecasts</li>
+                <li><b>Media Lab</b> — 1 model · 10 videos · 8–10 creatives</li>
+                <li><b>Brand PR Hub</b> — IG / FB / YT setup + management</li>
+                <li><b>Lead Engine</b> — Meta ads, funnel, landing → CRM</li>
+                <li><b>Conversation</b> — WhatsApp automation + CRM</li>
+                <li><b>Growth Tracker</b> — ad spend, CPL, reports</li>
+            </ul>
+            <a href="#contact" class="pkg__cta">Start with Impact</a>
+        </article>
+        <article class="pkg pkg--hero">
+            <div class="pkg__ribbon">MOST POPULAR</div>
+            <header>
+                <span class="pkg__tag">02 / GROWTH</span>
+                <h3 class="pkg__name">Influence</h3>
+                <div class="pkg__price"><span class="price-main">₹60,000</span><span class="price-sub">/ month <i>+GST</i></span></div>
+                <div class="pkg__quarter">or ₹1,60,000 / 3 months</div>
+            </header>
+            <ul class="pkg__list">
+                <li><em>Everything in Impact, plus —</em></li>
+                <li><b>Media Lab+</b> — 2 models, drone, 15 videos, 12–15 creatives</li>
+                <li><b>Lead Engine+</b> — Meta &amp; YouTube ad campaigns</li>
+                <li><b>Brand PR Hub+</b> — dedicated social media manager</li>
+                <li><b>Podcast</b> — 1hr pro setup + 5 reels edited</li>
+                <li><b>Conversation Pro</b> — drip, broadcasts, chatbot</li>
+                <li><b>Advanced CRM</b> with full automation</li>
+            </ul>
+            <a href="#contact" class="pkg__cta pkg__cta--solid">Scale with Influence</a>
+        </article>
+        <article class="pkg">
+            <header>
+                <span class="pkg__tag">03 / AUTHORITY</span>
+                <h3 class="pkg__name">Authority</h3>
+                <div class="pkg__price"><span class="price-main">₹1,10,000</span><span class="price-sub">/ month <i>+GST</i></span></div>
+                <div class="pkg__quarter">or ₹2,90,000 / 3 months</div>
+            </header>
+            <ul class="pkg__list">
+                <li><em>Everything in Influence, plus —</em></li>
+                <li><b>Media Lab Pro</b> — 4 models, multi-location, 20 videos, 25+ creatives</li>
+                <li><b>Lead Engine Pro</b> — Meta + YT + LinkedIn ads</li>
+                <li><b>Full Social Team</b> — manager + engagement exec</li>
+                <li><b>3 Podcasts</b> with external creators + 15 reels</li>
+                <li><b>PR</b> — featured articles + magazine placement</li>
+                <li><b>AI Chatbot</b> + sales &amp; service CRM integration</li>
+            </ul>
+            <a href="#contact" class="pkg__cta">Own with Authority</a>
+        </article>
+    </div>
+</section>
+
+<!-- ─── CLIENTS ─── -->
+<section class="clients" id="clients">
+    <div class="clients__head">
+        <span class="eyebrow">Proof in the payroll</span>
+        <h2>A client list that doesn't flinch.</h2>
+    </div>
+    <div class="clients__marquee">
+        <div class="clients__track">
+            <span>Corbett City</span><span>·</span>
+            <span>Dholera Smart City</span><span>·</span>
+            <span>ID Investors</span><span>·</span>
+            <span>Mahadev Infra</span><span>·</span>
+            <span>Krishna Properties</span><span>·</span>
+            <span>AKS Constructions</span><span>·</span>
+            <span>Regal Realty</span><span>·</span>
+            <span>Signature Residency</span><span>·</span>
+            <span>Navtap</span><span>·</span>
+            <span>Tatva Homes</span><span>·</span>
+            <span>Dev Green</span><span>·</span>
+            <span>T-Kajur</span><span>·</span>
+            <span>Bhumi Enclave</span><span>·</span>
+            <span>Jeevanpreet</span><span>·</span>
+            <span>Ashoka</span><span>·</span>
+            <span>Golden Key Realtors</span><span>·</span>
+            <span>Venus Enclave</span><span>·</span>
+            <span>KS Ventures</span><span>·</span>
+            <span>Gaurs</span><span>·</span>
+            <span>Ashok Leyland</span><span>·</span>
+            <span>EFM Global</span><span>·</span>
+        </div>
+    </div>
+</section>
+
+
+<!-- ─── TESTIMONIALS ─── -->
+<section class="testimonials">
+    <div class="section-head">
+        <span class="eyebrow">What founders say</span>
+        <h2 class="section-title">The <em>reviews</em> that actually move budgets.</h2>
+    </div>
+    <div class="testi-wrapper">
+        <div class="testi-grid" id="testiGrid">
+            <article class="testi">
+                <div class="testi__stars">★★★★★</div>
+                <p class="testi__quote">"The Adybros team didn't just run ads — they rebuilt our pipeline. Three months in, our CPL dropped 61% and our sales team finally has a backlog."</p>
+                <div class="testi__who">
+                    <img class="testi__avatar" src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=200&q=80" alt="" loading="lazy">
+                    <div>
+                        <div class="testi__name">Mohit Gupta</div>
+                        <div class="testi__role">Director · Real Estate</div>
+                    </div>
+                </div>
+            </article>
+            <article class="testi">
+                <div class="testi__stars">★★★★★</div>
+                <p class="testi__quote">"Best decision for our D2C brand. They handled everything from video shoots to Meta ads. We scaled from 10 orders to 150+ orders a day in just one quarter."</p>
+                <div class="testi__who">
+                    <img class="testi__avatar" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80" alt="" loading="lazy">
+                    <div>
+                        <div class="testi__name">Rahul Sharma</div>
+                        <div class="testi__role">Founder · Urban Cloth</div>
+                    </div>
+                </div>
+            </article>
+            <article class="testi">
+                <div class="testi__stars">★★★★★</div>
+                <p class="testi__quote">"Most agencies just talk. Adybros delivers. Their WhatsApp automation saved us countless hours of manual follow-ups. ROI is through the roof."</p>
+                <div class="testi__who">
+                    <img class="testi__avatar" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&q=80" alt="" loading="lazy">
+                    <div>
+                        <div class="testi__name">Anjali Mehra</div>
+                        <div class="testi__role">Marketing Head · Radiant Skin</div>
+                    </div>
+                </div>
+            </article>
+            <article class="testi">
+                <div class="testi__stars">★★★★★</div>
+                <p class="testi__quote">"Incredible attention to detail. Their creative team knows exactly what stops the scroll. Our lead quality has improved significantly since we switched."</p>
+                <div class="testi__who">
+                    <img class="testi__avatar" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&q=80" alt="" loading="lazy">
+                    <div>
+                        <div class="testi__name">Vikram Singh</div>
+                        <div class="testi__role">CEO · TechWiz Solutions</div>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="testi-nav">
+            <button class="testi-nav__btn testi-nav__btn--prev" id="testiPrev" aria-label="Previous testimonial">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+            </button>
+            <button class="testi-nav__btn testi-nav__btn--next" id="testiNext" aria-label="Next testimonial">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- ─── FAQ ─── -->
+<section class="faq" id="faq">
+    <div class="section-head center">
+        <span class="chapter">CH. 05 — ANSWERS</span>
+        <h2 class="section-title" style="margin-top:24px">Questions, <em>handled</em>.</h2>
+    </div>
+    <div class="faq__grid">
+        <div class="faq-item">
+            <div class="faq-item__q">
+                <h4>How quickly can we see results?</h4>
+                <div class="faq-item__plus"></div>
+            </div>
+            <div class="faq-item__a">
+                <p>Most performance clients see measurable improvement within 14–21 days. Meaningful revenue lift typically lands in weeks 6–10 once optimized.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ─── CONTACT ─── -->
+<section class="contact" id="contact">
+    <div class="contact__inner">
+        <div class="contact__left">
+            <span class="chapter">CH. 06 — BEGIN</span>
+            <h2>Ready to <em>print</em><br><span class="outline">pipeline?</span></h2>
+            <p>Book a 30-minute growth audit. We'll tear apart your funnel, show you where the leaks are, and leave you with a plan.</p>
+            <div class="contact__cta-row">
+                <a href="https://wa.me/916396831489" class="btn btn--ghost" style="background:var(--white);color:var(--red);border-color:var(--white)">WhatsApp Us</a>
+            </div>
+        </div>
+        <div class="contact__right">
+            <form class="form" id="briefForm" onsubmit="event.preventDefault(); document.getElementById('formMsg').classList.add('show'); this.reset();">
+                <div class="form__row">
+                    <label><span>01 · Your name</span><input type="text" required placeholder="What should we call you?" /></label>
+                </div>
+                <div class="form__row">
+                    <label><span>02 · Email / WhatsApp</span><input type="text" required placeholder="we'll reach you here" /></label>
+                </div>
+                <button type="submit" class="form__submit">
+                    <span>Send brief</span>
+                </button>
+                <p class="form__msg" id="formMsg">Thanks. We'll get back within one business day ↗</p>
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/sections/ui.js') }}"></script>
+<script src="{{ url_for('static', filename='js/sections/animations.js') }}"></script>
+{% endblock %}

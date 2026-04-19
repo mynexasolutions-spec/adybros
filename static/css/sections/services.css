@@ -1,0 +1,111 @@
+/* ---- Services / grid ---- */
+.services {
+    background: var(--black);
+    color: var(--white);
+    padding: 140px 36px
+}
+
+.services__grid {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    background: var(--line)
+}
+
+.service-card {
+    background: var(--black);
+    padding: 40px 32px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 420px;
+    transition: background .4s;
+}
+
+.service-card:hover {
+    background: #0c0c0c
+}
+
+.service-card__img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    filter: grayscale(100%) brightness(.7);
+    transition: filter .5s, transform .5s;
+    margin-bottom: 24px;
+}
+
+.service-card:hover .service-card__img {
+    filter: grayscale(0%) brightness(1);
+    transform: scale(1.03)
+}
+
+.service-card__no {
+    font-family: var(--f-display);
+    font-size: 14px;
+    color: var(--red);
+    letter-spacing: 2px;
+    margin-bottom: 10px
+}
+
+.service-card h3 {
+    font-family: var(--f-display);
+    font-size: 26px;
+    letter-spacing: -.02em;
+    margin-bottom: 12px;
+    line-height: 1.1
+}
+
+.service-card p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--muted);
+    flex: 1
+}
+
+.service-card__arrow {
+    margin-top: 20px;
+    font-family: var(--f-display);
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: var(--red);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.service-card__arrow svg {
+    transition: transform .3s
+}
+
+.service-card:hover .service-card__arrow svg {
+    transform: translateX(6px)
+}
+
+@media(max-width:1200px) {
+    .services__grid {
+        grid-template-columns: repeat(2, 1fr)
+    }
+}
+
+@media(max-width:720px) {
+    .services {
+        padding: 70px 20px
+    }
+    .services__grid {
+        grid-template-columns: 1fr;
+        gap: 1px
+    }
+
+    .service-card {
+        min-height: auto;
+        padding: 32px 24px
+    }
+
+    .service-card__img {
+        height: 200px
+    }
+}
