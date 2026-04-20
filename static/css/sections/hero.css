@@ -308,3 +308,238 @@
         font-size: 40px;
     }
 }
+
+/* ---- Hero Mockup Layout ---- */
+.hero--mockup {
+    min-height: 100vh;
+    padding: 0;
+    background: #0d0d0d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero__pill {
+    background: #e30613;
+    color: #fff;
+    padding: 12px 36px;
+    border-radius: 12px;
+    font-family: var(--f-body);
+    font-weight: 600;
+    font-size: 1.25rem;
+    position: relative;
+    z-index: 10;
+    box-shadow: 0 4px 20px rgba(227, 6, 19, 0.4);
+}
+
+.hero__main {
+    width: 100%;
+    max-width: 1300px;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.hero__founders-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.hero__founders-img {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+    filter: none;
+    mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
+    z-index: 2;
+}
+
+.founder-label {
+    position: absolute;
+    top: 40%;
+    font-family: var(--f-body);
+    font-style: italic;
+    font-size: 1.8rem;
+    color: #888;
+    z-index: 1;
+}
+
+.label--left { left: 5%; }
+.label--right { right: 5%; }
+
+.hero__overlay-left {
+    position: absolute;
+    bottom: 15%;
+    left: 2%;
+    background: rgba(176, 5, 16, 0.82);
+    padding: 2.5rem;
+    border-radius: 8px;
+    z-index: 10;
+    max-width: 440px;
+    text-align: left;
+    color: #fff;
+    backdrop-filter: blur(4px);
+}
+
+.hero__overlay-left h3 {
+    font-family: var(--f-display);
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.hero__stats-list {
+    list-style: none;
+}
+
+.hero__stats-list li {
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.hero__overlay-right {
+    position: absolute;
+    bottom: 20%;
+    right: -10%;
+    width: 600px;
+    height: 160px;
+    background: rgba(176, 5, 16, 0.75);
+    transform: rotate(-25deg);
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    padding: 0 80px;
+    backdrop-filter: blur(4px);
+}
+
+.trust-content {
+    transform: rotate(25deg);
+    text-align: left;
+    color: #fff;
+}
+
+.trust-content p {
+    font-weight: 600;
+    font-size: 1.1rem;
+    line-height: 1.3;
+    margin-bottom: 10px;
+    max-width: 300px;
+}
+
+.trust-icons {
+    display: flex;
+    gap: 20px;
+    font-size: 1.5rem;
+    opacity: 0.9;
+}
+
+.trust-badge {
+    position: absolute;
+    right: 60px;
+    top: -50px;
+    transform: rotate(25deg);
+    background: #000;
+    border: 3px solid #ffcc00;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.badge-inner {
+    display: flex;
+    flex-direction: column;
+    color: #ffcc00;
+    font-family: var(--f-display);
+}
+
+.badge-inner span { font-size: 0.7rem; letter-spacing: 2px; }
+.badge-inner strong { font-size: 1rem; }
+
+@media(max-width: 1200px) {
+    .label--left, .label--right { display: none; }
+    .hero__overlay-left { left: 2%; bottom: 15%; max-width: 380px; }
+    .hero__overlay-right { right: -15%; }
+}
+
+@media(max-width: 768px) {
+    .hero--mockup { 
+        min-height: unset; 
+        height: auto; 
+    }
+    .hero__founders-container { 
+        height: auto; 
+    }
+    .hero__founders-img {
+        width: 100%;
+        height: auto;
+        display: block;
+        mask-image: none;
+        -webkit-mask-image: none;
+    }
+    .hero__main {
+        transform: none;
+        width: 100%;
+        max-width: 100vw;
+    }
+
+    /* Fluid Left Stats Box */
+    .hero__overlay-left {
+        bottom: 12%;
+        left: 2%;
+        max-width: 34vw;
+        padding: 3vw;
+        border-radius: 1vw;
+    }
+    .hero__overlay-left h3 {
+        font-size: 2vw;
+        margin-bottom: 1.5vw;
+    }
+    .hero__stats-list li {
+        font-size: 1.2vw;
+        margin-bottom: 1vw;
+        gap: 1vw;
+    }
+    
+    /* Fluid Right Trust Strip */
+    .hero__overlay-right {
+        bottom: 18%;
+        right: -8vw;
+        width: 46vw;
+        height: 12.3vw;
+        padding: 0 6vw;
+        transform: rotate(-25deg);
+    }
+    .trust-content p {
+        font-size: 1.3vw;
+        margin-bottom: 0.8vw;
+        line-height: 1.2;
+    }
+    .trust-icons {
+        gap: 1.5vw;
+        font-size: 1.8vw;
+    }
+    .trust-badge {
+        right: 4.5vw;
+        top: -3.8vw;
+        padding: 1vw;
+        border: 0.25vw solid #ffcc00;
+        border-radius: 0.6vw;
+        box-shadow: 0 1vw 2vw rgba(0,0,0,0.5);
+    }
+    .badge-inner span { font-size: 0.8vw; letter-spacing: 0.15vw; }
+    .badge-inner strong { font-size: 1.2vw; }
+}

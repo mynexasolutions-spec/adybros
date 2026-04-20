@@ -16,48 +16,44 @@
 {% endblock %}
 
 {% block content %}
-<!-- ─── HERO ─── -->
-<section class="hero">
-    <div class="hero__bg" aria-hidden="true"></div>
-    <div class="hero__meta">
-        <span class="hero__meta-id">[ A-001 / 2026 ]</span>
-        <span class="hero__meta-loc">BAREILLY · DELHI · GLOBAL</span>
+<section class="hero hero--mockup">
+    <div class="hero__bg-grain"></div>
+
+    <div class="hero__main">
+        <div class="hero__founders-container">
+            <img src="{{ url_for('static', filename='images/founders.png') }}" alt="Founders"
+                class="hero__founders-img">
+
+            <!-- Left Overlay Box -->
+            <div class="hero__overlay-left">
+                <h3>ADYBROS :-</h3>
+                <ul class="hero__stats-list">
+                    <li><span class="icon">📢</span> 400+ Ads Delivered</li>
+                    <li><span class="icon">💰</span> Lakhs Spent on Campaigns</li>
+                    <li><span class="icon">📈</span> Crores Generated in Sales</li>
+                    <li><span class="icon">🤝</span> Trusted by Leading Brands & Businesses</li>
+                    <li><span class="icon">📊</span> Data-Driven Marketing with Proven ROI</li>
+                    <li><span class="icon">🎬</span> Creative Content that Converts Buyers</li>
+                </ul>
+            </div>
+
+            <!-- Right Overlay Strip -->
+            <div class="hero__overlay-right">
+                <div class="trust-content">
+                    <p>“Trusted by Growing Brands & Businesses”</p>
+                    <div class="trust-icons">
+                        <span>🤝</span><span>⚡</span><span>🧲</span><span>📈</span>
+                    </div>
+                </div>
+                <div class="trust-badge">
+                    <div class="badge-inner">
+                        <span>TRUSTED</span>
+                        <strong>BRAND</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <h1 class="hero__title">
-        <span class="line line--1">Turning</span>
-        <span class="line line--2">businesses</span>
-        <span class="line line--3">into <em>leads</em> &amp;</span>
-        <span class="line line--4">
-            <span class="slash">SALES</span>
-            <svg class="arrow" viewBox="0 0 120 60" aria-hidden="true">
-                <path d="M5 30 L110 30 M85 8 L110 30 L85 52" stroke="currentColor" stroke-width="6" fill="none" stroke-linecap="square" />
-            </svg>
-            <span class="machines">machines.</span>
-        </span>
-    </h1>
-    <div class="hero__foot">
-        <div class="hero__blurb">
-            <span class="dot"></span>
-            <p>A performance marketing studio engineered for growth-hungry brands. We don't just post — we <em>print pipeline</em>.</p>
-        </div>
-        <div class="hero__cta-row">
-            <a href="#contact" class="btn btn--primary">Book Free Audit</a>
-            <a href="#packages" class="btn btn--ghost">See Packages</a>
-        </div>
-    </div>
-    <aside class="hero__side">
-        <div class="stamp">
-            <svg viewBox="0 0 160 160" width="130" height="130">
-                <defs>
-                    <path id="circ" d="M 80,80 m -60,0 a 60,60 0 1,1 120,0 a 60,60 0 1,1 -120,0" />
-                </defs>
-                <text font-family="Space Grotesk" font-size="11" font-weight="600" letter-spacing="2" fill="currentColor">
-                    <textPath href="#circ">TRUSTED BY GROWING BRANDS · EST. 2022 · ROI OBSESSED · </textPath>
-                </text>
-                <polygon points="80,55 95,105 55,75 105,75 65,105" fill="var(--red)" />
-            </svg>
-        </div>
-    </aside>
 </section>
 
 <!-- ─── MARQUEE ─── -->
@@ -121,15 +117,20 @@
 <section class="about" id="about">
     <div class="about__inner">
         <div class="about__media">
-            <img class="about__media-main" src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=900&q=80" alt="Adybros team at work" loading="lazy">
+            <img class="about__media-main" src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=900&q=80"
+                alt="Adybros team at work" loading="lazy">
             <span class="about__tag">// THE STUDIO</span>
             <div class="about__media-stamp" aria-hidden="true"></div>
         </div>
         <div class="about__body">
             <span class="chapter">CH. 01 — WHO WE ARE</span>
             <h2 style="margin-top:24px">We're the growth partner your <em>competitors</em> wish they had.</h2>
-            <p>Adybros Marketing was built on a simple obsession — <em>pipeline over posts.</em> We stopped caring about vanity metrics years ago. Instead, we wake up asking one question: how much revenue did we move this week?</p>
-            <p>Founded by <strong>Aakarshit Pathak</strong> and <strong>Lakshya Bhatnagar</strong>, we've grown into a tight team of strategists, media buyers, creatives, and CRM engineers who treat your ad spend like it's our own money.</p>
+            <p>Adybros Marketing was built on a simple obsession — <em>pipeline over posts.</em> We stopped caring about
+                vanity metrics years ago. Instead, we wake up asking one question: how much revenue did we move this
+                week?</p>
+            <p>Founded by <strong>Aakarshit Pathak</strong> and <strong>Lakshya Bhatnagar</strong>, we've grown into a
+                tight team of strategists, media buyers, creatives, and CRM engineers who treat your ad spend like it's
+                our own money.</p>
             <a href="#contact" class="btn btn--primary">Let's Talk Growth</a>
         </div>
     </div>
@@ -154,79 +155,105 @@
     <div class="section-head center">
         <span class="chapter">CH. 02 — WHAT WE DO</span>
         <h2 class="section-title" style="margin-top:24px">Full-stack <em>digital marketing</em>.<br>Under one roof.</h2>
-        <p class="section-lead" style="margin-left:auto;margin-right:auto">Nine disciplines. One integrated growth engine. Every service is optional — but none of them feel optional once you see the numbers.</p>
+        <p class="section-lead" style="margin-left:auto;margin-right:auto">Nine disciplines. One integrated growth
+            engine. Every service is optional — but none of them feel optional once you see the numbers.</p>
     </div>
     <div class="services__grid">
         <article class="service-card">
-            <img class="service-card__img" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=700&q=80" alt="Performance advertising" loading="lazy">
+            <img class="service-card__img" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=700&q=80"
+                alt="Performance advertising" loading="lazy">
             <span class="service-card__no">01 / PAID MEDIA</span>
             <h3>Performance Advertising</h3>
-            <p>Meta, Google, YouTube &amp; LinkedIn campaigns engineered for ROAS. Lead gen, awareness, retargeting — we run it all.</p>
-            <a href="#contact" class="btn btn--primary" style="margin-top:20px; font-size:11px; padding:12px 20px">Contact Now</a>
+            <p>Meta, Google, YouTube &amp; LinkedIn campaigns engineered for ROAS. Lead gen, awareness, retargeting — we
+                run it all.</p>
+            <a href="#contact" class="btn btn--primary"
+                style="margin-top:20px; font-size:11px; padding:12px 20px">Contact Now</a>
         </article>
         <!-- Card 02 -->
         <article class="service-card">
-            <img class="service-card__img" src="https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=700&q=80" alt="SEO" loading="lazy">
+            <img class="service-card__img" src="https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=700&q=80"
+                alt="SEO" loading="lazy">
             <span class="service-card__no">02 / ORGANIC</span>
             <h3>SEO &amp; Content</h3>
-            <p>Rank for the searches your buyers actually make. On-page audits, link building, and content that earns clicks.</p>
-            <a href="#contact" class="btn btn--primary" style="margin-top:20px; font-size:11px; padding:12px 20px">Contact Now</a>
+            <p>Rank for the searches your buyers actually make. On-page audits, link building, and content that earns
+                clicks.</p>
+            <a href="#contact" class="btn btn--primary"
+                style="margin-top:20px; font-size:11px; padding:12px 20px">Contact Now</a>
         </article>
         <!-- Card 03 -->
         <article class="service-card">
-            <img class="service-card__img" src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=700&q=80" alt="Social Media" loading="lazy">
+            <img class="service-card__img" src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=700&q=80"
+                alt="Social Media" loading="lazy">
             <span class="service-card__no">03 / SOCIAL</span>
             <h3>Social Media Management</h3>
-            <p>Instagram, Facebook, LinkedIn, YouTube. Dedicated managers, content calendars, and engagement that compounds.</p>
-            <a href="#contact" class="btn btn--primary" style="margin-top:20px; font-size:11px; padding:12px 20px">Contact Now</a>
+            <p>Instagram, Facebook, LinkedIn, YouTube. Dedicated managers, content calendars, and engagement that
+                compounds.</p>
+            <a href="#contact" class="btn btn--primary"
+                style="margin-top:20px; font-size:11px; padding:12px 20px">Contact Now</a>
         </article>
         <!-- Card 04 -->
         <article class="service-card">
-            <img class="service-card__img" src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=700&q=80" alt="Video production" loading="lazy">
+            <img class="service-card__img" src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=700&q=80"
+                alt="Video production" loading="lazy">
             <span class="service-card__no">04 / MEDIA LAB</span>
             <h3>Video &amp; Content Production</h3>
-            <p>On-site shoots, studio setups, drone cinematics. 45–90s reels, product videos, and scroll-stopping creatives.</p>
-            <a href="#contact" class="btn btn--primary" style="margin-top:20px; font-size:11px; padding:12px 20px">Contact Now</a>
+            <p>On-site shoots, studio setups, drone cinematics. 45–90s reels, product videos, and scroll-stopping
+                creatives.</p>
+            <a href="#contact" class="btn btn--primary"
+                style="margin-top:20px; font-size:11px; padding:12px 20px">Contact Now</a>
         </article>
         <!-- Card 05 -->
         <article class="service-card">
-            <img class="service-card__img" src="https://images.unsplash.com/photo-1559028012-481c04fa702d?w=700&q=80" alt="Branding design" loading="lazy">
+            <img class="service-card__img" src="https://images.unsplash.com/photo-1559028012-481c04fa702d?w=700&q=80"
+                alt="Branding design" loading="lazy">
             <span class="service-card__no">05 / DESIGN</span>
             <h3>Branding &amp; Creative Design</h3>
-            <p>Logos, brand systems, carousels, static ads, landing pages. Visual identity that stops the scroll and earns trust.</p>
-            <a href="#contact" class="btn btn--primary" style="margin-top:20px; font-size:11px; padding:12px 20px">Contact Now</a>
+            <p>Logos, brand systems, carousels, static ads, landing pages. Visual identity that stops the scroll and
+                earns trust.</p>
+            <a href="#contact" class="btn btn--primary"
+                style="margin-top:20px; font-size:11px; padding:12px 20px">Contact Now</a>
         </article>
         <!-- Card 06 -->
         <article class="service-card">
-            <img class="service-card__img" src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=700&q=80" alt="Lead generation" loading="lazy">
+            <img class="service-card__img" src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=700&q=80"
+                alt="Lead generation" loading="lazy">
             <span class="service-card__no">06 / LEAD ENGINE</span>
             <h3>Lead Generation &amp; Funnels</h3>
             <p>Landing pages, lead magnets, CRM integration. We build the full funnel: Ad → Page → CRM → Follow-up.</p>
-            <a href="#contact" class="btn btn--primary" style="margin-top:20px; font-size:11px; padding:12px 20px">Contact Now</a>
+            <a href="#contact" class="btn btn--primary"
+                style="margin-top:20px; font-size:11px; padding:12px 20px">Contact Now</a>
         </article>
         <!-- Card 07 -->
         <article class="service-card">
-            <img class="service-card__img" src="https://images.unsplash.com/photo-1556157382-97eda2d62296?w=700&q=80" alt="WhatsApp marketing" loading="lazy">
+            <img class="service-card__img" src="https://images.unsplash.com/photo-1556157382-97eda2d62296?w=700&q=80"
+                alt="WhatsApp marketing" loading="lazy">
             <span class="service-card__no">07 / CRM</span>
             <h3>WhatsApp &amp; CRM Automation</h3>
-            <p>Auto-replies, drip campaigns, AI chatbots, broadcasts. Turn cold leads into paying customers on autopilot.</p>
-            <a href="#contact" class="btn btn--primary" style="margin-top:20px; font-size:11px; padding:12px 20px">Contact Now</a>
+            <p>Auto-replies, drip campaigns, AI chatbots, broadcasts. Turn cold leads into paying customers on
+                autopilot.</p>
+            <a href="#contact" class="btn btn--primary"
+                style="margin-top:20px; font-size:11px; padding:12px 20px">Contact Now</a>
         </article>
         <!-- Card 08 -->
         <article class="service-card">
-            <img class="service-card__img" src="https://images.unsplash.com/photo-1493612276216-ee3925520721?w=700&q=80" alt="Influencer marketing" loading="lazy">
+            <img class="service-card__img" src="https://images.unsplash.com/photo-1493612276216-ee3925520721?w=700&q=80"
+                alt="Influencer marketing" loading="lazy">
             <span class="service-card__no">08 / INFLUENCE</span>
             <h3>Influencer &amp; PR</h3>
-            <p>Podcast placements, creator collabs, magazine features, and articles on top platforms. We build the authority layer.</p>
-            <a href="#contact" class="btn btn--primary" style="margin-top:20px; font-size:11px; padding:12px 20px">Contact Now</a>
+            <p>Podcast placements, creator collabs, magazine features, and articles on top platforms. We build the
+                authority layer.</p>
+            <a href="#contact" class="btn btn--primary"
+                style="margin-top:20px; font-size:11px; padding:12px 20px">Contact Now</a>
         </article>
         <!-- Card 09 -->
         <article class="service-card">
-            <img class="service-card__img" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=700&q=80" alt="Analytics" loading="lazy">
+            <img class="service-card__img" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=700&q=80"
+                alt="Analytics" loading="lazy">
             <span class="service-card__no">09 / ANALYTICS</span>
             <h3>Analytics &amp; Growth Tracking</h3>
             <p>Ad-spend tracking, CPL insights, campaign-wise reports. Dashboards your founder can actually read.</p>
-            <a href="#contact" class="btn btn--primary" style="margin-top:20px; font-size:11px; padding:12px 20px">Contact Now</a>
+            <a href="#contact" class="btn btn--primary"
+                style="margin-top:20px; font-size:11px; padding:12px 20px">Contact Now</a>
         </article>
     </div>
 </section>
@@ -246,64 +273,79 @@
     <div class="section-head center">
         <span class="chapter">CH. 03 — THE SYSTEM</span>
         <h2 class="section-title" style="margin-top:24px">The <em>Seven Stations</em> of Adybros.</h2>
-        <p class="section-lead" style="margin-left:auto;margin-right:auto;color:var(--muted-dark)">A repeatable, seven-stage machine. Plug in your brand — get out leads, sales, and compounding authority.</p>
+        <p class="section-lead" style="margin-left:auto;margin-right:auto;color:var(--muted-dark)">A repeatable,
+            seven-stage machine. Plug in your brand — get out leads, sales, and compounding authority.</p>
     </div>
     <ol class="stations">
         <li class="station">
             <div class="station__no">01</div>
             <div class="station__body">
                 <h3>Customer DNA</h3>
-                <p>Buyer segmentation by budget, location &amp; preference. Audience profiling and razor-sharp buyer insights.</p>
+                <p>Buyer segmentation by budget, location &amp; preference. Audience profiling and razor-sharp buyer
+                    insights.</p>
             </div>
-            <img class="station__img" src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=500&q=80" alt="" loading="lazy">
+            <img class="station__img" src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=500&q=80" alt=""
+                loading="lazy">
         </li>
         <li class="station">
             <div class="station__no">02</div>
             <div class="station__body">
                 <h3>Marketing Funnel</h3>
-                <p>ROI-based ad budget planning. CPL &amp; sales forecasts the founder can actually defend in a board meeting.</p>
+                <p>ROI-based ad budget planning. CPL &amp; sales forecasts the founder can actually defend in a board
+                    meeting.</p>
             </div>
-            <img class="station__img" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&q=80" alt="" loading="lazy">
+            <img class="station__img" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&q=80"
+                alt="" loading="lazy">
         </li>
         <li class="station">
             <div class="station__no">03</div>
             <div class="station__body">
                 <h3>Media Lab</h3>
-                <p>On-site, studio, drone &amp; gimbal. Professionally shot videos, static creatives, carousels — content built to convert.</p>
+                <p>On-site, studio, drone &amp; gimbal. Professionally shot videos, static creatives, carousels —
+                    content built to convert.</p>
             </div>
-            <img class="station__img" src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=500&q=80" alt="" loading="lazy">
+            <img class="station__img" src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=500&q=80"
+                alt="" loading="lazy">
         </li>
         <li class="station">
             <div class="station__no">04</div>
             <div class="station__body">
                 <h3>Brand PR Hub</h3>
-                <p>Instagram, Facebook, YouTube &amp; LinkedIn — managed end-to-end. Podcasts, features, magazine placements.</p>
+                <p>Instagram, Facebook, YouTube &amp; LinkedIn — managed end-to-end. Podcasts, features, magazine
+                    placements.</p>
             </div>
-            <img class="station__img" src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=500&q=80" alt="" loading="lazy">
+            <img class="station__img" src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=500&q=80"
+                alt="" loading="lazy">
         </li>
         <li class="station">
             <div class="station__no">05</div>
             <div class="station__body">
                 <h3>Lead Engine</h3>
-                <p>Meta, YouTube &amp; LinkedIn ad campaigns. Landing pages, retargeting and airtight funnels wired into your CRM.</p>
+                <p>Meta, YouTube &amp; LinkedIn ad campaigns. Landing pages, retargeting and airtight funnels wired into
+                    your CRM.</p>
             </div>
-            <img class="station__img" src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=500&q=80" alt="" loading="lazy">
+            <img class="station__img" src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=500&q=80" alt=""
+                loading="lazy">
         </li>
         <li class="station">
             <div class="station__no">06</div>
             <div class="station__body">
                 <h3>Conversation Framework</h3>
-                <p>WhatsApp automation, drip campaigns &amp; AI chatbots. Lead tracking, sales pipeline, reminders &amp; follow-ups.</p>
+                <p>WhatsApp automation, drip campaigns &amp; AI chatbots. Lead tracking, sales pipeline, reminders &amp;
+                    follow-ups.</p>
             </div>
-            <img class="station__img" src="https://images.unsplash.com/photo-1556157382-97eda2d62296?w=500&q=80" alt="" loading="lazy">
+            <img class="station__img" src="https://images.unsplash.com/photo-1556157382-97eda2d62296?w=500&q=80" alt=""
+                loading="lazy">
         </li>
         <li class="station">
             <div class="station__no">07</div>
             <div class="station__body">
                 <h3>Growth Tracker</h3>
-                <p>Ad-spend tracking, campaign-wise performance reports, leads generated &amp; CPL insights. No dashboards to decode.</p>
+                <p>Ad-spend tracking, campaign-wise performance reports, leads generated &amp; CPL insights. No
+                    dashboards to decode.</p>
             </div>
-            <img class="station__img" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&q=80" alt="" loading="lazy">
+            <img class="station__img" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&q=80" alt=""
+                loading="lazy">
         </li>
     </ol>
 </section>
@@ -331,7 +373,8 @@
     </div>
     <div class="work__grid">
         <a href="#contact" class="case">
-            <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1200&q=80" alt="Real estate case" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1200&q=80" alt="Real estate case"
+                loading="lazy">
             <div class="case__overlay">
                 <span class="case__tag">REAL ESTATE · META ADS</span>
                 <h3 class="case__title">Mahadev Infra — 3.2× ROAS in 90 days</h3>
@@ -393,14 +436,16 @@
     <div class="section-head">
         <span class="chapter">CH. 04 — INVEST</span>
         <h2 class="section-title" style="margin-top:24px">Three packages. <em>Zero</em> guesswork.</h2>
-        <p class="section-lead">Pick the engine that matches your ambition. All prices exclusive of GST. Quarterly plans unlock deeper value.</p>
+        <p class="section-lead">Pick the engine that matches your ambition. All prices exclusive of GST. Quarterly plans
+            unlock deeper value.</p>
     </div>
     <div class="pkg-grid">
         <article class="pkg">
             <header>
                 <span class="pkg__tag">01 / ENTRY</span>
                 <h3 class="pkg__name">Impact</h3>
-                <div class="pkg__price"><span class="price-main">₹35,000</span><span class="price-sub">/ month <i>+GST</i></span></div>
+                <div class="pkg__price"><span class="price-main">₹35,000</span><span class="price-sub">/ month
+                        <i>+GST</i></span></div>
                 <div class="pkg__quarter">or ₹95,000 / 3 months</div>
             </header>
             <ul class="pkg__list">
@@ -419,7 +464,8 @@
             <header>
                 <span class="pkg__tag">02 / GROWTH</span>
                 <h3 class="pkg__name">Influence</h3>
-                <div class="pkg__price"><span class="price-main">₹60,000</span><span class="price-sub">/ month <i>+GST</i></span></div>
+                <div class="pkg__price"><span class="price-main">₹60,000</span><span class="price-sub">/ month
+                        <i>+GST</i></span></div>
                 <div class="pkg__quarter">or ₹1,60,000 / 3 months</div>
             </header>
             <ul class="pkg__list">
@@ -437,7 +483,8 @@
             <header>
                 <span class="pkg__tag">03 / AUTHORITY</span>
                 <h3 class="pkg__name">Authority</h3>
-                <div class="pkg__price"><span class="price-main">₹1,10,000</span><span class="price-sub">/ month <i>+GST</i></span></div>
+                <div class="pkg__price"><span class="price-main">₹1,10,000</span><span class="price-sub">/ month
+                        <i>+GST</i></span></div>
                 <div class="pkg__quarter">or ₹2,90,000 / 3 months</div>
             </header>
             <ul class="pkg__list">
@@ -498,9 +545,12 @@
         <div class="testi-grid" id="testiGrid">
             <article class="testi">
                 <div class="testi__stars">★★★★★</div>
-                <p class="testi__quote">"The Adybros team didn't just run ads — they rebuilt our pipeline. Three months in, our CPL dropped 61% and our sales team finally has a backlog."</p>
+                <p class="testi__quote">"The Adybros team didn't just run ads — they rebuilt our pipeline. Three months
+                    in, our CPL dropped 61% and our sales team finally has a backlog."</p>
                 <div class="testi__who">
-                    <img class="testi__avatar" src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=200&q=80" alt="" loading="lazy">
+                    <img class="testi__avatar"
+                        src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=200&q=80" alt=""
+                        loading="lazy">
                     <div>
                         <div class="testi__name">Mohit Gupta</div>
                         <div class="testi__role">Director · Real Estate</div>
@@ -509,9 +559,12 @@
             </article>
             <article class="testi">
                 <div class="testi__stars">★★★★★</div>
-                <p class="testi__quote">"Best decision for our D2C brand. They handled everything from video shoots to Meta ads. We scaled from 10 orders to 150+ orders a day in just one quarter."</p>
+                <p class="testi__quote">"Best decision for our D2C brand. They handled everything from video shoots to
+                    Meta ads. We scaled from 10 orders to 150+ orders a day in just one quarter."</p>
                 <div class="testi__who">
-                    <img class="testi__avatar" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80" alt="" loading="lazy">
+                    <img class="testi__avatar"
+                        src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80" alt=""
+                        loading="lazy">
                     <div>
                         <div class="testi__name">Rahul Sharma</div>
                         <div class="testi__role">Founder · Urban Cloth</div>
@@ -520,9 +573,12 @@
             </article>
             <article class="testi">
                 <div class="testi__stars">★★★★★</div>
-                <p class="testi__quote">"Most agencies just talk. Adybros delivers. Their WhatsApp automation saved us countless hours of manual follow-ups. ROI is through the roof."</p>
+                <p class="testi__quote">"Most agencies just talk. Adybros delivers. Their WhatsApp automation saved us
+                    countless hours of manual follow-ups. ROI is through the roof."</p>
                 <div class="testi__who">
-                    <img class="testi__avatar" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&q=80" alt="" loading="lazy">
+                    <img class="testi__avatar"
+                        src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&q=80" alt=""
+                        loading="lazy">
                     <div>
                         <div class="testi__name">Anjali Mehra</div>
                         <div class="testi__role">Marketing Head · Radiant Skin</div>
@@ -531,9 +587,12 @@
             </article>
             <article class="testi">
                 <div class="testi__stars">★★★★★</div>
-                <p class="testi__quote">"Incredible attention to detail. Their creative team knows exactly what stops the scroll. Our lead quality has improved significantly since we switched."</p>
+                <p class="testi__quote">"Incredible attention to detail. Their creative team knows exactly what stops
+                    the scroll. Our lead quality has improved significantly since we switched."</p>
                 <div class="testi__who">
-                    <img class="testi__avatar" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&q=80" alt="" loading="lazy">
+                    <img class="testi__avatar"
+                        src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&q=80" alt=""
+                        loading="lazy">
                     <div>
                         <div class="testi__name">Vikram Singh</div>
                         <div class="testi__role">CEO · TechWiz Solutions</div>
@@ -543,10 +602,14 @@
         </div>
         <div class="testi-nav">
             <button class="testi-nav__btn testi-nav__btn--prev" id="testiPrev" aria-label="Previous testimonial">
-                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M15 18l-6-6 6-6" />
+                </svg>
             </button>
             <button class="testi-nav__btn testi-nav__btn--next" id="testiNext" aria-label="Next testimonial">
-                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 18l6-6-6-6" />
+                </svg>
             </button>
         </div>
     </div>
@@ -565,7 +628,8 @@
                 <div class="faq-item__plus"></div>
             </div>
             <div class="faq-item__a">
-                <p>Most performance clients see measurable improvement within 14–21 days. Meaningful revenue lift typically lands in weeks 6–10 once optimized.</p>
+                <p>Most performance clients see measurable improvement within 14–21 days. Meaningful revenue lift
+                    typically lands in weeks 6–10 once optimized.</p>
             </div>
         </div>
     </div>
@@ -577,18 +641,22 @@
         <div class="contact__left">
             <span class="chapter">CH. 06 — BEGIN</span>
             <h2>Ready to <em>print</em><br><span class="outline">pipeline?</span></h2>
-            <p>Book a 30-minute growth audit. We'll tear apart your funnel, show you where the leaks are, and leave you with a plan.</p>
+            <p>Book a 30-minute growth audit. We'll tear apart your funnel, show you where the leaks are, and leave you
+                with a plan.</p>
             <div class="contact__cta-row">
-                <a href="https://wa.me/916396831489" class="btn btn--ghost" style="background:var(--white);color:var(--red);border-color:var(--white)">WhatsApp Us</a>
+                <a href="https://wa.me/916396831489" class="btn btn--ghost"
+                    style="background:var(--white);color:var(--red);border-color:var(--white)">WhatsApp Us</a>
             </div>
         </div>
         <div class="contact__right">
-            <form class="form" id="briefForm" onsubmit="event.preventDefault(); document.getElementById('formMsg').classList.add('show'); this.reset();">
+            <form class="form" id="briefForm">
                 <div class="form__row">
-                    <label><span>01 · Your name</span><input type="text" required placeholder="What should we call you?" /></label>
+                    <label><span>01 · Your name</span><input type="text" id="formName" required
+                            placeholder="What should we call you?" /></label>
                 </div>
                 <div class="form__row">
-                    <label><span>02 · Email / WhatsApp</span><input type="text" required placeholder="we'll reach you here" /></label>
+                    <label><span>02 · Email / WhatsApp</span><input type="text" id="formContact" required
+                            placeholder="we'll reach you here" /></label>
                 </div>
                 <button type="submit" class="form__submit">
                     <span>Send brief</span>
@@ -603,4 +671,17 @@
 {% block extra_js %}
 <script src="{{ url_for('static', filename='js/sections/ui.js') }}"></script>
 <script src="{{ url_for('static', filename='js/sections/animations.js') }}"></script>
+<script>
+document.getElementById('briefForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const name = document.getElementById('formName').value;
+    const contact = document.getElementById('formContact').value;
+    const message = `Hello Adybros, I'm ${name}. My contact info is ${contact}. I'm interested in your services!`;
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappUrl = `https://wa.me/916396831489?text=${encodedMessage}`;
+    window.open(whatsappUrl, '_blank');
+    document.getElementById('formMsg').classList.add('show');
+    this.reset();
+});
+</script>
 {% endblock %}
